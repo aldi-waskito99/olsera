@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "ae9fe9c3-4d97-4e11-83b5-7c0c87505e16",
+		"name": "Olsera Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Create Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nama",
+							"value": "Baju Batik",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Update Item",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/items/1?nama=Baju Batik",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"items",
+						"1"
+					],
+					"query": [
+						{
+							"key": "nama",
+							"value": "Baju Batik"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Delete Item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/items/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"items",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Create Pajak",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "item_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "nama",
+							"value": "pajak toko",
+							"type": "text"
+						},
+						{
+							"key": "rate",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/pajaks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pajaks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Update Pajak",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/pajaks/3?item_id=3&nama=pajak toko&rate=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pajaks",
+						"3"
+					],
+					"query": [
+						{
+							"key": "item_id",
+							"value": "3"
+						},
+						{
+							"key": "nama",
+							"value": "pajak toko"
+						},
+						{
+							"key": "rate",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Delete Pajak",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/pajaks/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pajaks",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8. List Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|Kqmx0sb6Z4jYBxRpez6In2lkxI1QZTbNo26nUcfB",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
