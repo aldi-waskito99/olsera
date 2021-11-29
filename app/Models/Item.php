@@ -7,6 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
-    protected $guarded = [];
+    
     use HasFactory;
+
+    protected $table = 'items';
+    protected $fillable = [
+        'nama',
+    ];
+
+    public function pajak(){
+        return $this->hasMany('App\Models\Pajak');
+    }
 }

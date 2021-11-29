@@ -6,29 +6,28 @@
 	},
 	"item": [
 		{
-			"name": "1. Create Item",
+			"name": "1. Add Data",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
-					"mode": "formdata",
-					"formdata": [
+					"mode": "urlencoded",
+					"urlencoded": [
 						{
 							"key": "nama",
-							"value": "Baju Batik",
+							"value": "Baju Renang",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/items",
+					"raw": "http://localhost:8000/items",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
-						"api",
 						"items"
 					]
 				}
@@ -36,174 +35,70 @@
 			"response": []
 		},
 		{
-			"name": "2. Update Item",
+			"name": "2. Show Data Detail",
 			"request": {
-				"method": "PUT",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8000/api/items/1?nama=Baju Batik",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"items",
-						"1"
-					],
-					"query": [
-						{
-							"key": "nama",
-							"value": "Baju Batik"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "3. Delete Item",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8000/api/items/2",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"items",
-						"2"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "4. Create Pajak",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "item_id",
-							"value": "4",
-							"type": "text"
-						},
-						{
-							"key": "nama",
-							"value": "pajak toko",
-							"type": "text"
-						},
-						{
-							"key": "rate",
-							"value": "10",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:8000/api/pajaks",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"pajaks"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "5. Update Pajak",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8000/api/pajaks/3?item_id=3&nama=pajak toko&rate=5",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"pajaks",
-						"3"
-					],
-					"query": [
-						{
-							"key": "item_id",
-							"value": "3"
-						},
-						{
-							"key": "nama",
-							"value": "pajak toko"
-						},
-						{
-							"key": "rate",
-							"value": "5"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "6. Delete Pajak",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8000/api/pajaks/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"pajaks",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "8. List Item",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "10|Kqmx0sb6Z4jYBxRpez6In2lkxI1QZTbNo26nUcfB",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/items",
+					"raw": "http://localhost:8000/items/4",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
-						"api",
-						"items"
+						"items",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Update Data Item",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nama",
+							"value": "Baju Sekolah",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/items/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"items",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Delete Item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/items/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"items",
+						"4"
 					]
 				}
 			},
